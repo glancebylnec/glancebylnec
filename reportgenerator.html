@@ -212,7 +212,7 @@
         
         <body>
             <div class="header">
-                <img src="lnec_logo.png" alt="LNEC Logo">
+                <img src="logo_lnec.png" alt="LNEC Logo">
                 <h1>${formData.get('project-name')}</h1>
                 <hr>
                 <p><strong>Department:</strong> ${formData.get('department')}</p>
@@ -236,7 +236,7 @@
 
         if (vtkUrl) {
             reportContent += `
-                <iframe src="https://glancebylnec.github.io/glancewebapp/index?name=${fileName || 'file.vtkjs'}&url=${vtkUrl}" allowfullscreen></iframe>
+                <iframe src="https://glancebylnec.github.io/glancewebapp/index?name=${fileName || 'file.vtkjs'}&url=${vtkUrl}" allowfullscreen style="width: 100%; height: 600px; border: none;"></iframe>
             `;
         } else if (file) {
             if (fileName.endsWith('.pdf')) {
