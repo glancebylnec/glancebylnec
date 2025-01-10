@@ -78,6 +78,25 @@ button:hover {
 }
 
 
+.instruction-button {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 25px; 
+    margin-top: 10px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+   
+
+}
+
+.instruction-button:hover {
+    background-color: #0056b3; 
+}
+
+
+
 
 
 .circle-button {
@@ -166,4 +185,43 @@ button:hover {
 .info-icon:focus .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Full-width for smaller screens */
+    max-width: 600px; /* Limit max width */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -12,6 +12,7 @@
         <!-- Header Section -->
         <div class="header">
             <img src="lnec_logo.png" alt="LNEC Logo">
+            <button class="instruction-button" onclick="openModal(event)" style="float: right; margin-left: auto; margin-top: 10px;">Instructions</button>
             <h1>Report Generator</h1>
         </div>
 
@@ -68,13 +69,41 @@
                 <button type="button" onclick="addSection()" class="circle-button">+</button>
             </div>
             <div style="text-align: right; margin-top: 20px;">
+             <!--   <button class="instruction-button" onclick="openModal(event)" style="float: left; margin-right: auto;">Instructions</button> -->
                 <button type="button" onclick="generateReport()">Download Report</button>
-                <button type="button" onclick="downloadLogo()" style="margin-left: 10px;">Download LNEC Logo</button>
+                <button type="button" onclick="downloadLogo()" style="margin-left: 10px;">Download LNEC logo</button>
+                
             </div>
+
+            
+
+            <!-- Modal for Instructions -->
+            <div id="instruction-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>How to Use This Report Generator</h2>
+                    <ol>
+                        <li>Fill in the project details (name, department, unit, authors).</li>
+                        <li>Add sections using the <strong>+</strong> button and provide the section title, description, and optional VTKJS URL.</li>
+                        <li>To upload VTKJS files:
+                            <ul>
+                                <li>Go to <a href="https://github.com" target="_blank">GitHub</a>.</li>
+                                <li>Upload your .vtkjs file and click 'Raw'.</li>
+                                <li>Copy the URL and paste it in the VTKJS URL field.</li>
+                            </ul>
+                        </li>
+                        <li>Upload any images or PDFs related to your report sections.</li>
+                        <li>Click 'Download Report' to generate and save the report as an HTML file.</li>
+                    </ol>
+                    <p>Ensure all uploaded files are in the same folder as the generated HTML file for proper linking.</p>
+                </div>
+            </div>
+        </div>
         </form>
     </div>
 
     <script>
+
         let sectionCount = 1;
 
         function addSection() {
@@ -280,8 +309,22 @@ document.addEventListener('change', function (event) {
     }
 });
 
+function openModal(event) {
+    event.preventDefault(); // Prevent the default action
+    document.getElementById('instruction-modal').style.display = 'block';
+}
 
+function closeModal() {
+    document.getElementById('instruction-modal').style.display = 'none';
+}
 
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('instruction-modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
     </script>
 </body>
 </html>
