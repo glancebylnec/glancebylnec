@@ -91,20 +91,24 @@
                 <label for="section-description-${sectionCount}">Description:</label>
                 <textarea id="section-description-${sectionCount}" name="section-description-${sectionCount}" rows="3" placeholder="Enter section description"></textarea>
 
-                <label for="vtk-url-${sectionCount}">
-                    VTKJS URL (Optional):
-                    <span class="info-icon" title="How to upload and get your VTKJS URL: 
-                    1. Go to GitHub and log in. 
-                    2. Create or select a repository. 
-                    3. Click 'Add file' → 'Upload files'. 
-                    4. Upload your .vtkjs file and commit. 
-                    5. Open the file and click 'Raw'. 
-                    6. Copy the URL (should start with 'https://raw.githubusercontent.com').
-                    Example: 
-                    Original: https://github.com/username/repository/blob/main/example.vtkjs
-                    Raw: https://raw.githubusercontent.com/username/repository/main/example.vtkjs
-                    7. Paste it here.">i</span>
-                </label>
+                <label for="vtk-url-1">
+                        VTKJS URL (Optional):
+                        <span class="info-icon">i
+                            <span class="tooltip">
+                                How to upload and get your VTKJS URL: 
+                                1. Go to <a href="https://github.com" target="_blank" style="color: #66c0ff; text-decoration: underline;">GitHub</a> and log in. 
+                                2. Create or select a repository. 
+                                3. Click 'Add file' → 'Upload files'. 
+                                4. Upload your .vtkjs file and commit. 
+                                5. Open the file and click 'Raw'. 
+                                6. Copy the URL (should start with 'https://raw.githubusercontent.com').
+                                Example: 
+                                Original: https://github.com/username/repository/blob/main/example.vtkjs
+                                Raw: https://raw.githubusercontent.com/username/repository/main/example.vtkjs
+                                7. Paste it here.
+                            </span>
+                        </span>
+                    </label>
                 <input type="text" id="vtk-url-${sectionCount}" name="vtk-url-${sectionCount}" placeholder="Enter VTKJS file URL">
 
                 <label for="file-upload-${sectionCount}">Upload File (Image, PDF):</label>
